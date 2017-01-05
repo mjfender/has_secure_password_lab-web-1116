@@ -1,0 +1,15 @@
+<h1> Login </h1>
+<% if flash[:notice] %>
+  <h2> <%= flash[:notice] %> </h2>
+<% end %>
+
+<%= form_for @user do |f| %>
+  <%= f.label :name %>
+  <%= f.textfield :name %>
+
+  <%= f.label :password %>
+  <%= f.passwordfield :password %>
+  
+  <%= f.submit %>
+<% end %>
+
